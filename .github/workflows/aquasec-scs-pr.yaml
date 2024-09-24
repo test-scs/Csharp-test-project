@@ -5,6 +5,9 @@ env:
   AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
   GITHUB_TOKEN: ${{ secrets.TOKEN }}
   TRIVY_RUN_AS_PLUGIN: 'aqua'
+  TRIVY_AUTH_URL: "ghcr.io"
+  TRIVY_USERNAME: "Teja-Chittamuri"
+  TRIVY_PASSWORD: ${{ secrets.TOKEN }}
 jobs:
   aqua:
     name: Aqua scanner
