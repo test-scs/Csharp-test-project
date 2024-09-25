@@ -18,3 +18,4 @@ env:
    #GITHUB_TOKEN: ${{ secrets.TOKEN }}
    TRIVY_RUN_AS_PLUGIN: 'aqua'
    ACTIONS_RUNTIME_TOKEN: ${{ secrets.TOKEN }}   
+   TRIVY_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-db:2
