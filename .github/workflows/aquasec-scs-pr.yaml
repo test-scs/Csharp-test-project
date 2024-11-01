@@ -12,13 +12,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Aqua scanner
-        uses: docker://aquasec/aqua-scanner
+        uses: docker://aquasec/aqua-scanner:v0.184.0
         with:
-          args: trivy fs --scanners misconfig,vuln,secret --sast .
+          args: trivy fs --sast --scanners misconfig,vuln,secret --db-repository=registry.aquasec.com/trivy-db:2 --checks-bundle-repository=registry.aquasec.com/trivy-checks:1 --java-db-repository=registry.aquasec.com/trivy-java-db:1 .
 env:
-   AQUA_KEY: ${{ secrets.AQUA_KEY }}
-   AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
-   #GITHUB_TOKEN: ${{ secrets.TOKEN }}
-   TRIVY_RUN_AS_PLUGIN: 'aqua'
-   #ACTIONS_RUNTIME_TOKEN: ${{ secrets.TOKEN }}   
-   TRIVY_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-db:2
+    AQUA_KEY: ${{ secrets.AQUA_KEY }}
+    AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
+    GITHUB_TOKEN: ${{ secrets.TOKEN }}
+    TRIVY_RUN_AS_PLUGIN: 'aqua'
+    ACTIONS_RUNTIME_TOKEN: ${{ secrets.TOKEN }}   
+    TRIVY_USERNAME: ${{ secrets.TRIVY_USERNAME }}
+    TRIVY_PASSWORD: ${{ secrets.TRIVY_PASSWORD }} 
