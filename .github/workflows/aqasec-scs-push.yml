@@ -5,7 +5,7 @@ on:
       - main
   workflow_dispatch:   
 jobs:
-  aqua:
+  test:
     name: Aqua scanner
     runs-on: ubuntu-latest
     permissions:
