@@ -3,7 +3,7 @@ on:
  pull_request:
  workflow_dispatch:
 jobs:
-  aqua:
+  aquatest:
     name: Aqua scanner
     runs-on: ubuntu-latest
     permissions:
