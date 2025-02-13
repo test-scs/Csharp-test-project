@@ -51,6 +51,6 @@ docker build -t appsecco/dvcsharp .
 docker run -d --name dvcsharp -it -p 5000:5000 appsecco/dvcsharp
 ```
 
-## Solution
+## Solution ##
 
 The [documentation-dvcsharp-book](./documentation-dvcsharp-book) folder has instructions to use the app and exploit vulnerabilities that have been programmed.
