@@ -7,7 +7,7 @@ gdugeuf
 
 **Note:** This is a deliberately vulnerable app, please do not host it on production or Internet/public facing servers. Use with caution.
 
-### Docker
+### Docker test
 
 ```
 docker-compose up
